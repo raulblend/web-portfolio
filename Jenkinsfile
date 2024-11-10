@@ -19,11 +19,4 @@ pipeline {
         }
 
     }
-    post {
-        always {
-            script {
-                docker.image("${IMAGE_NAME}").remove()
-            }
-        }
-    }
 }
